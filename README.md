@@ -31,7 +31,7 @@
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone https://github.com/Riss2121/3_1_3_Zadacha.git
+git clone https://github.com/Riss2121/3_1_2_Zadacha.git
 2. Настроить базу данных
 
 Создай БД в MySQL:
