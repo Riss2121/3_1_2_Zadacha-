@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>User</title>
@@ -19,7 +21,7 @@
           th:text="${role.name} + ' '"></span>
 </p>
 
-<a th:href="@{/admin}" th:if="${#authorization.expression('hasRole(''ADMIN'')')}">Admin panel</a>
+<a th:href="@{/admin}" sec:authorize="hasRole('ADMIN')">Admin panel</a>
 
 <form th:action="@{/logout}" method="post">
     <button type="submit">Logout</button>
